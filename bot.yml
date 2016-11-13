@@ -10,4 +10,8 @@ config:
     friendly_name: DB_KEY
     info: The key for the database
     global: false
+  - name: SECRET
+    friendly_name: TEST_GLOBAL
+    info: Just some global info
+    global: true
 # To learn everything supported in the bot.yml file, visit https://beepboophq.com/docs/article/bot-yml
