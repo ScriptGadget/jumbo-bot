@@ -1,4 +1,13 @@
 name: jumbobot
 description: Jumbo helps you remember lists of things.
 avatar: .beepboop/noun_544584.png
+config:
+  - name: SECRET
+    friendly_name: DB_ID
+    info: The client id for the database
+    global: false
+  - name: SECRET
+    friendly_name: DB_KEY
+    info: The key for the database
+    global: false
 # To learn everything supported in the bot.yml file, visit https://beepboophq.com/docs/article/bot-yml
