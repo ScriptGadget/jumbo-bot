@@ -38,8 +38,8 @@ slapp.message('help', ['mention', 'direct_message'], (msg) => {
 })
 
 // remember something
-slapp.message('remember', ['mention', 'direct_message'], (msg, text) => {
-  msg.say("I can't remember: " + text + "... yet");
+slapp.message('remember', ['mention', 'direct_message'], (msg) => {
+  msg.say("I can't remember: " + msg.body.event.text + "... yet");
 })
 
 // "Conversation" flow that tracks state - kicks off when user says hi, hello or hey
