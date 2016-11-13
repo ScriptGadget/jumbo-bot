@@ -21,6 +21,9 @@ I will respond to the following messages:
 \`help\` - to see this message.
 \`hi\` - to demonstrate a conversation that tracks state.
 \`thanks\` - to demonstrate a simple response.
+\`remember\` - to remember something
+\`forget\` - to forget something
+\`list\` - to show the list of remembered things
 \`<type-any-other-text>\` - to demonstrate a random emoticon response, some of the time :wink:.
 \`attachment\` - to see a Slack attachment message.
 `
@@ -32,6 +35,11 @@ I will respond to the following messages:
 // response to the user typing "help"
 slapp.message('help', ['mention', 'direct_message'], (msg) => {
   msg.say(HELP_TEXT)
+})
+
+// remember something
+slapp.message('remember', ['mention', 'direct_message'], (msg, text) => {
+  msg.say("I can't remember: " + text + "... yet");
 })
 
 // "Conversation" flow that tracks state - kicks off when user says hi, hello or hey
