@@ -2,19 +2,14 @@ name: jumbobot
 description: Jumbo helps you remember lists of things.
 avatar: .beepboop/noun_544584.png
 config:
-  - name: DB_ID
-    friendly_name: mLab Client ID
-    info: The client id for the database
+  - name: DB_USER
+    friendly_name: mLab db user
+    info: The user for the database
     type: secret
     global: false
-  - name: DB_KEY
-    friendly_name: mLab Secret Key
-    info: The key for the database
+  - name: DB_PASS
+    friendly_name: mLab db user password
+    info: The password for the database user
     type: secret
     global: false
-  - name: TEST_GLOBAL
-    friendly_name: Test Global
-    info: Just some global info
-    type: secret
-    global: true
 # To learn everything supported in the bot.yml file, visit https://beepboophq.com/docs/article/bot-yml
