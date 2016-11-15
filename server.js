@@ -37,13 +37,13 @@ slapp.message('help', ['mention', 'direct_message'], (msg) => {
 })
 
 // remember something
-slapp.message('remember', ['mention', 'direct_message'], (msg, text, memory) => {
+slapp.message('remember (.*)', ['mention', 'direct_message'], (msg, text, memory) => {
   memories.push(memory);
   msg.say("OK. I now remember " + memories.length + " things.");
 })
 
 // forget something
-slapp.message('forget', ['mention', 'direct_message'], (msg, text, selection) => {
+slapp.message('forget (.*)', ['mention', 'direct_message'], (msg, text, selection) => {
   var index = parseInt(selection, 10);
   if (index >= 0 && index < memories.length) {
       memories.splice(index, 1);
