@@ -43,7 +43,7 @@ slapp.message('remember', ['mention', 'direct_message'], (msg) => {
 })
 
 // forget something
-slapp.message('remember', ['mention', 'direct_message'], (msg) => {
+slapp.message('forget', ['mention', 'direct_message'], (msg) => {
   var index = parseInt(msg.body.event.text, 10);
   if (index && index < memories.length) {
       memories.splice(index, 1);
@@ -52,7 +52,7 @@ slapp.message('remember', ['mention', 'direct_message'], (msg) => {
 })
 
 // list things I remember
-slapp.message('remember', ['mention', 'direct_message'], (msg) => {
+slapp.message('list', ['mention', 'direct_message'], (msg) => {
   var length = memories.length;
   var response = "I remember:\n";
   for (var i = 0; i < length; i++) {
