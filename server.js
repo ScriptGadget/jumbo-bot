@@ -54,9 +54,12 @@ slapp.message('forget', ['mention', 'direct_message'], (msg) => {
 // list things I remember
 slapp.message('list', ['mention', 'direct_message'], (msg) => {
   var length = memories.length;
-  var response = "I remember:\n";
-  for (var i = 0; i < length; i++) {
-    response += "" + i + ". " + memories[i] + "\n";
+  var response = "I don't remember anything.";
+  if (length) {  
+      response = "I remember:\n";
+      for (var i = 0; i < length; i++) {
+          response += "" + i + ". " + memories[i] + "\n";
+      }
   }
   msg.say(response);
 })
